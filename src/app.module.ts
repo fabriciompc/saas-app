@@ -3,10 +3,13 @@ import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { TenantModule } from './controllers/tenant/tenant.module';
 import { DatabaseModule } from './infrastructure/database/database.module';
 
 @Module({
   imports: [
+    TenantModule,
+    DatabaseModule,
     ConfigModule.forRoot({
       validationSchema: Joi.object({
         POSTGRES_HOST: Joi.string().required(),
@@ -17,7 +20,6 @@ import { DatabaseModule } from './infrastructure/database/database.module';
         PORT: Joi.number(),
       }),
     }),
-    DatabaseModule,
   ],
   controllers: [AppController],
   providers: [AppService],

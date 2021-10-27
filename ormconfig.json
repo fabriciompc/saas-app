@@ -1,16 +1,16 @@
 [
-    {
-      "name": "default",
-      "type": "postgres",
-      "host": "localhost",
-      "port": 5432,
-      "username": "admin",
-      "password": "admin",
-      "database": "saas-app",
-      "entities": ["dist/**/**/*.mapper{ .ts,.js}"],
-      "synchronize": false,
-      "migrations": ["dist/infrastructure/database/migrations/*{.ts,.js}"],
-      "migrationsTableName": "migrations_typeorm",
-      "migrationsRun": true
-    }
-  ]
+  {
+    "name": "default",
+    "type": "postgres",
+    "host": "localhost",
+    "port": 5432,
+    "username": "admin",
+    "password": "admin",
+    "database": "saas-app",
+    "entities": ["dist/**/**/entities/*.{ .ts,.js}"],
+    "synchronize": false,
+    "migrations": ["dist/infrastructure/database/migrations/*{.ts,.js}"],
+    "migrationsTableName": "migrations_typeorm",
+    "migrationsRun": true
+  }
+]
