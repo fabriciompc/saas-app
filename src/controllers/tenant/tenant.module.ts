@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { TenantService } from 'src/services/tenant.service';
 import { Tenant } from '../../domain/entities/tenant.entity';
-import { TenantService } from '../../services/tenant.service';
 import { TenantController } from './tenant.controller';
 
 @Module({

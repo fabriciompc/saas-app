@@ -1,9 +1,9 @@
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { Tenant } from '../domain/entities/tenant.entity';
 import { Repository } from 'typeorm';
-import { CreateTenantModel } from '../shared/models/tenant/create-tenant.model';
+import { Tenant } from '../domain/entities/tenant.entity';
 import { UpdateTenantModel } from '../shared/models/tenant/update-tenant.model';
+import { CreateTenantModel } from './../shared/models/tenant/create-tenant.model';
 
 @Injectable()
 export class TenantService {
